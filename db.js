@@ -3,8 +3,10 @@
 // 'db' module has user{username}, setUsername, newHero, updateHero, findHEro, findLevel, getMonsters
 // Need to make easier to use this db.js for other apps. Is Mongolian easy enough for it?
 
+var connectionString = process.env.CUSTOMCONNSTR_MONGOLAB_URI;
+
 var Mongolian = require('mongolian')
-	, server = new Mongolian
+	, server = new Mongolian(connectionString)
 	, db = server.db('nairezed')
 	, heroes = db.collection('heroes')
 	, levelup = db.collection('levelup')
