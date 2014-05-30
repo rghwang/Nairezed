@@ -7,7 +7,7 @@ var connectionString = process.env.CUSTOMCONNSTR_MONGOLAB_URI;
 
 var Mongolian = require('mongolian')
 	, server = new Mongolian(connectionString)
-	, db = server.db('nairezed')
+	, db = server.db('MongoLab-l')
 	, heroes = db.collection('heroes')
 	, levelup = db.collection('levelup')
 	, monsters = db.collection('monsters')
